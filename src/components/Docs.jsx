@@ -74,10 +74,7 @@ export default function Docs({
             .catch((error) => {
                 console.error('Error deleting document: ', error);
             });
-        toast.success('Want to delete?', {
-            autoClose: 2000
-        })
-        // alert('Want to delete?');
+        alert('Want to delete?');
     };
 
     return (
