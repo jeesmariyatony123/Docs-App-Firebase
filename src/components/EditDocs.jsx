@@ -11,6 +11,7 @@ import {
     onSnapshot
 } from 'firebase/firestore';
 
+
 export default function EditDocs({
     database
 }) {
@@ -58,19 +59,23 @@ export default function EditDocs({
         isMounted.current = true;
         getData()
     }, [])
+
+    
     return (
         <>
             <Link to={'/'}><button className='add-docs'>Back To Home</button></Link>
             <div className='editDocs-main'>
                 <ToastContainer />
                 <h1>{documentTitle}</h1>
-                <div className='editDocs-inner'>
+                <div className='editDocs-inner' >
+                    
                     <ReactQuill
                         className='react-quill'
                         value={docsDesc}
                         onChange={getQuillData}
                     />
-                </div>
+                    
+                </div>       
             </div>
         </>
     )

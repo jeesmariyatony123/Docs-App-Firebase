@@ -46,6 +46,7 @@ export default function ModalComponent({
                             Add
                         </button>
                     </div>
+                    
                 </Box>
             </Modal>
         </div>
